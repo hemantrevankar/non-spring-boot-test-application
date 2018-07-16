@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+web.xml is the deployment descriptor file required as per the Java web standards to deploy java web application on the web server.
+DispatcherServlet is the Spring MVC's front controller that accepts/intercepts all the requests made using the mapped URL path.
+After the DispathcerServlet is loaded, the framework then looks by default for a file [servlet-name]-servlet.xml file to read the 
+context configuration for DispatcherServlet specific WebApplicationContext.
+We can change the location of this configuration file by explicitly specifying the configContextLocation parameter and the path of the
+xml file as the parameter value.
+We can also create a Root WebApplicationContext that will shared across the servlets defined for the application.
+The servlet specific WebApplicationContext will inherit the Root WebApplicationContext
+The root WebApplicationContext will be configured using the ContextLoaderListener
+
+
+ -->
 <!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
